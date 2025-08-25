@@ -1,6 +1,6 @@
 # **Unified Transaction & Activity Processing Engine**
 
-This project is a **distributed data processing system** built in **Java** using **Hadoop MapReduce** and exposed via a **gRPC API**. It aggregates and analyzes **large-scale transactional and activity data**, breaking down **data silos** — *not just yet another MapReduce app*. The system is containerized with **Docker** for consistent deployments.
+This project  aggregates and analyzes **large-scale transactional and activity data**, breaking down **data silos** — *not just yet another MapReduce app*.
 
 ---
 
