@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: activity-service
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  metrics:
+    tags:
+      application: activity-service
+
+generator:
+  ingestion-host: ${INGESTION_HOST:ingestion-service}
+  ingestion-port: ${INGESTION_PORT:9090} # gRPC port of ingestion-service

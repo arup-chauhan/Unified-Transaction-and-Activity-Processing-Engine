@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package ingestion;
+
+option java_multiple_files = true;
+option java_package = "com.engine.ingestion.grpc";
+option java_outer_classname = "IngestionProto";
+
+// DTO for a transaction
+message TransactionDto {
+  int64 id = 1;
+  string description = 2;   // changed from transactionId → description
+  double amount = 3;
+  string currency = 4;
+  string status = 5;
+  string timestamp = 6;
+}
+
+// DTO for an activity log
+message ActivityDto {
+  int64 id = 1;
+  string activity = 2;      // changed from action → activity
+  string description = 3;
+  string timestamp = 4;
+}
+
+// Response for ingestion RPCs
+message IngestResponse {
+  bool success = 1;
+}
+
+// gRPC service definition
+service IngestionService {
+  rpc IngestTransaction(TransactionDto) returns (IngestResponse);
+  rpc IngestActivity(ActivityDto) returns (IngestResponse);
+}

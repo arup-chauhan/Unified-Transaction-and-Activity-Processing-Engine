@@ -1,8 +1,6 @@
 # Compiled class file
 *.class
 
-# Log file
-*.log
 
 # BlueJ files
 *.ctxt
@@ -25,3 +23,31 @@ replay_pid*
 
 # Ignore the original README backup
 README-origin.md
+
+# Maven
+/target/
+/*/target/
+/**/target/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+
+# Eclipse/STS (just in case someone imports there)
+.project
+.classpath
+.settings/
+
+# Logs
+*.log
+logs/
+*.out
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Environment / Secrets
+.env

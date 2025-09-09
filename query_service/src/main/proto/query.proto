@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package query;
+
+option java_multiple_files = true;
+option java_package = "com.engine.query.grpc";
+option java_outer_classname = "QueryProto";
+
+message QueryRequest {
+  string metricName = 1;
+  string startDate = 2;
+  string endDate = 3;
+}
+
+message QueryResponse {
+  int64 id = 1;
+  string metricName = 2;
+  double metricValue = 3;
+  string windowStart = 4;
+  string windowEnd = 5;
+}
+
+service QueryService {
+  rpc GetAggregatedMetrics(QueryRequest) returns (stream QueryResponse);
+}

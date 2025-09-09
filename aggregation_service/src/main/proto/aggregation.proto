@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package aggregation;
+
+option java_multiple_files = true;
+option java_package = "com.engine.aggregation.grpc";
+option java_outer_classname = "AggregationProto";
+
+message AggregationRequest {
+  string startDate = 1;
+  string endDate = 2;
+}
+
+message AggregatedMetricsDto {
+  int64 id = 1;
+  string metricName = 2;
+  double metricValue = 3;
+  string windowStart = 4;
+  string windowEnd = 5;
+}
+
+message AggregationResponse {
+  bool success = 1;
+}
+
+service AggregationService {
+  rpc RunAggregation(AggregationRequest) returns (AggregationResponse);
+  rpc GetAggregatedMetrics(AggregationRequest) returns (stream AggregatedMetricsDto);
+}

@@ -1,0 +1,9 @@
+{
+  "proto": "../proto/unified.proto",
+  "call": "engine.query.QueryService/GetAggregatedMetrics",
+  "n": 10000,
+  "c": 500,
+  "data": {
+    "query": "select * from metrics"
+  }
+}
