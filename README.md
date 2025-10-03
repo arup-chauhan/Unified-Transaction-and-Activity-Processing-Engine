@@ -1,7 +1,6 @@
 # **Unified Transaction & Activity Processing Engine**
 
-This project  aggregates and analyzes **large-scale transactional and activity data**, breaking down **data silos** — *not just yet another MapReduce app*.
-
+This project  aggregates and analyzes **large-scale transactional and activity data**, breaking down **data silos**
 ---
 
 ## **Table of Contents**
