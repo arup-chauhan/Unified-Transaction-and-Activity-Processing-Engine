@@ -1,6 +1,6 @@
 # **Unified Transaction & Activity Processing Engine**
 
-This project  aggregates and analyzes **large-scale transactional and activity data**, breaking down **data silos**
+A low-latency system that aggregates and analyzes **large-scale transactional and activity data**, breaking down **data silos**
 ---
 
 ## **Table of Contents**
